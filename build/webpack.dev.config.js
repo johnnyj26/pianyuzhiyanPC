@@ -36,6 +36,9 @@ module.exports = {
                 cacheDirectory: true
             }
         }, {
+            test: /\.css$/,
+            loader: 'style!css'
+        }, {
             test: /\.scss$/,
             loaders: [
                 'style',
@@ -54,7 +57,7 @@ module.exports = {
         }]
     },
     resolve: {
-        extensions: ['', '.js', '.json', '.scss']
+        extensions: ['', '.js', '.json', '.scss', '.css']
     },
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),

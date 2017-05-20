@@ -45,6 +45,9 @@ clientConfig = {
                 cacheDirectory: true
             }
         }, {
+            test: /\.css$/,
+            loader: ExtractTextPlugin.extract('style', 'css!postcss')
+        }, {
             test: /\.scss$/,
             loader: ExtractTextPlugin.extract('style', 'css?modules&camelCase&importLoaders=1&localIdentName=[hash:base64:8]!postcss!sass')
         }, {
@@ -116,6 +119,11 @@ serverConfig = {
                 plugins: ['add-module-exports'],
                 cacheDirectory: true
             }
+        }, {
+            test: /\.css$/,
+            loaders: [
+                'css'
+            ]
         }, {
             test: /\.scss$/,
             loaders: [
