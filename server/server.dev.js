@@ -28,7 +28,7 @@ require('asset-require-hook')({
     limit: 8000
 })
 
-const app = require('./app.js'),
+const app = require('./appNew.js'),
     convert = require('koa-convert'),
     webpack = require('webpack'),
     fs = require('fs'),
